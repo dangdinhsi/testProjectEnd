@@ -1,0 +1,254 @@
+<script type="text/javascript" src="/Jquery/JQuery.js"></script>
+<script src="/assets/dist/owl.carousel.min.js"></script>
+<script>
+    $(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:24,
+            nav:false,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:4
+                }
+            }
+        });
+        var owl = $('.myowl_si');
+        $(".carousel_button_right").click(function(){
+            owl.trigger('next.owl.carousel');
+        });
+        $(".carousel_button_left").click(function(){
+            owl.trigger("prev.owl.carousel");
+        });
+    });
+</script>
+<!-- xu li box quantity -->
+<script>
+    $(function(){
+        $('.input_next').click(function(){
+            var currentQuantity = $('.input_box_current-quantity').text();
+            currentQuantity++;
+            $(this).parent().find('.input_box_current-quantity').html(currentQuantity);
+        });
+
+        $('.input_prev').click(function(){
+            var currentQuantity = $('.input_box_current-quantity').text();
+            currentQuantity--;
+            if(currentQuantity>=1){
+                $(this).parent().find('.input_box_current-quantity').html(currentQuantity);
+            }
+        });
+    });
+</script>
+<!-- end xu li box quantity -->
+<!-- xu li chuyen hinh anh san pham -->
+<script>
+    const slides=document.querySelector(".slider_images").children;
+    const prev=document.querySelector(".prev");
+    const next=document.querySelector(".next");
+    const indicator=document.querySelector(".slide_details-product_list");
+    let index=0;
+    prev.addEventListener("click",function(){
+        prevSlide();
+        updateCircleIndicator();
+        resetTimer();
+    });
+    next.addEventListener("click",function(){
+        nextSlide();
+        updateCircleIndicator();
+    });
+    function indicateSlide(element){
+        index=element.id;
+        changeSlide();
+        updateCircleIndicator();
+    }
+    function updateCircleIndicator(){
+        for(let i=0; i<indicator.children.length; i++){
+            indicator.children[i].classList.remove("active");
+        }
+        indicator.children[index].classList.add("active");
+    };
+    function prevSlide(){
+        if(index==0){
+            index=slides.length-1;
+        }
+        else{
+            index--;
+        }
+        changeSlide();
+    }
+
+    function nextSlide(){
+        if(index==slides.length-1){
+            index=0;
+        }
+        else{
+            index++;
+        }
+        changeSlide();
+    }
+
+    function changeSlide(){
+        for(let i=0; i<slides.length; i++){
+            slides[i].classList.remove("active");
+        }
+
+        slides[index].classList.add("active");
+    }
+</script>
+<!-- end xu li chuyen hinh anh san pham -->
+<!-- xu li rateting -->
+<script>
+    $(document).ready(function(){
+        /* 1. Visualizing things on Hover - See next part for action on click */
+        $('#stars li').on('mouseover', function(){
+            var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+            // Now highlight all the stars that's not after the current hovered star
+            $(this).parent().children('li.star').each(function(e){
+                if (e < onStar) {
+                    $(this).addClass('hover');
+                }
+                else {
+                    $(this).removeClass('hover');
+                }
+            });
+
+        }).on('mouseout', function(){
+            $(this).parent().children('li.star').each(function(e){
+                $(this).removeClass('hover');
+            });
+        });
+
+
+        /* 2. Action to perform on click */
+        $('#stars li').on('click', function(){
+            var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+            var stars = $(this).parent().children('li.star');
+
+            for (i = 0; i < stars.length; i++) {
+                $(stars[i]).removeClass('selected');
+            }
+
+            for (i = 0; i < onStar; i++) {
+                $(stars[i]).addClass('selected');
+            }
+        });
+        $('.body-detail_content-link').click(function(){
+            var id = $(this).attr('title');
+            var str = '#'+id;
+            $('a.body-detail_content-link').removeClass('active');
+            $(this).addClass('active');
+            $('.tab').removeClass('active');
+            $(str).addClass('active');
+        });
+    });
+</script>
+<!--end xu li rateting -->
+<!-- JS modal regiser and login -->
+<script>
+    var modal = $("#myModal");
+    var regiser =$('#btnRegister');
+    var login =$('#btnLogin');
+    var exit =$('.myExit');
+    var back = $('.btn-back');
+    $(function(){
+        regiser.click(function(){
+            $('#formLogin').css("display","none");
+            $('#formRegister').css("display","block");
+            modal.css("visibility","visible");
+            modal.css("opacity","1");
+        });
+        login.click(function(){
+            $('#formRegister').css("display","none");
+            $('#formLogin').css("display","block");
+            modal.css("visibility","visible");
+            modal.css("opacity","1");
+        });
+        exit.click(function(){
+            modal.css("visibility","hidden");
+            modal.css("opacity","0");
+        });
+        back.click(function(){
+            modal.css("visibility","hidden");
+            modal.css("opacity","0");
+        });
+        $('#myModal_overlay').click(function(){
+            modal.css("visibility","hidden");
+            modal.css("opacity","0");
+        });
+
+    });
+</script>
+<!-- JS modal regiser and login -->
+<!-- JS xu li them san pham gio hang -->
+<script>
+    var productModal =$('#productModal');
+    var cart =[];
+    $(function () {
+        // $('.mycategory-product-overlay-icon').click(function () {
+        //     alert(1);
+        // });
+        var cartCount =0;
+        $('.mycategory-product-overlay_cart').click(function () {
+            productModal.css("visibility","visible");
+            productModal.css("opacity","1");
+            setTimeout(function() {
+                productModal.css("visibility","hidden");
+                productModal.css("opacity","0");
+            }, 1500);
+            $('.header__cart-list').removeClass('shopping_cart-nocart');
+            $('.button_cart_exist-item').attr("display","block;");
+            cartCount++;
+           var product = $(this).parents('.mycategory-product').find('.mycategory-product_info');
+           var id = product.attr('id');
+           var src = product.find('.mycategory-product_info_image img').attr('src');
+           var name = product.find('.mycategory-product_info_name').text();
+           var price = product.find('.mycategory-product_info_price').text();
+            $('.header__cart-notice').html(cartCount);
+            var obj ={
+                id: id,
+                productName:name,
+                imageUrl :src,
+                price :price
+            }
+            var flag =false;
+            for(var i =0;i<cart.length;i++){
+                if(cart[i].id === obj.id){
+                    flag =true;
+                    break;
+                }
+            }
+            if(flag ===false){
+                obj.quantity =1;
+                cart.push(obj);
+            }else {
+                cart[i].quantity +=1;
+            }
+            drawCart();
+        });
+    });
+    function drawCart() {
+        $('.shopping_cart-exist-cart').empty();
+        var ckUnit ="";
+        for(var i=0;i<cart.length;i++){
+        ckUnit += `
+            <div class="shopping_cart-exist-cart_detail">
+                <img src="${cart[i].imageUrl}" alt="default_thumnail-product">
+                <div class="product-exist-cart_detail">
+                    <span class="product-exist-cart_detail_name">${cart[i].productName}</span>
+                    <span class="product-exist-cart_detail_quantity-price">${cart[i].quantity} x ${cart[i].price}</span>
+                </div>
+                <a href="/payment" title="Edit Cart"><i class="product-exist-cart_detail_edit-icon fas fa-pencil-alt"></i></a>
+            </div>
+        `;
+        }
+        $('.shopping_cart-exist-cart').append(ckUnit);
+    }
+</script>

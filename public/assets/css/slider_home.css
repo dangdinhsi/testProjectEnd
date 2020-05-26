@@ -1,0 +1,99 @@
+.home_slider{
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    height: 450px;
+    overflow:hidden;
+    position: relative;
+}
+
+.home_slider .slide{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index:1;
+    display:none;
+    animation: slide 4s ease;
+}
+.home_slider .slide.active{
+    display: flex;
+}
+@keyframes slide{
+    0%{
+        transform:scale(1.1);
+        opacity: 0.8;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+.home_slider .my_controls .prev,
+.home_slider .my_controls .next{
+    position: absolute;
+    z-index:5;
+    top:50%;
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: -20px;
+    color: #c3c3c3;
+    text-align: center;
+    line-height: 40px;
+    font-size:20px;
+    cursor:pointer;
+    transition: all .5s ease;
+}
+.home_slider .my_controls .prev:hover,
+.home_slider .my_controls .next:hover{
+    color: white;
+    background-color: #fd6500;
+}
+.home_slider .my_controls .prev{
+    left:0;
+}
+.home_slider .my_controls .next{
+    right:0;
+}
+
+.home_slider .indicator{
+    cursor: pointer;
+    position: absolute;
+    left:50%;
+    bottom:10px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.home_slider .indicator div{
+    display: inline-block;
+    width:25px;
+    height: 25px;
+    color:#ffffff;
+    background-color: #FF5722;
+    border-radius:50%;
+    text-align: center;
+    line-height: 25px;
+    margin:0 3px;
+}
+
+.home_slider .indicator div.active{
+    background-color: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

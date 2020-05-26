@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <%- include('mycss') -%>
+</head>
+<body>
+<!--Dang Dinh Si header -->
+<div class="wrapper">
+    <div class="header_top">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-map-marker-alt"></i>
+                            <span>Store Location</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-truck"></i>
+                            <span>Track Your Order</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" id="btnLogin" href="#"><span>Login</span></a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" id="btnRegister" href="#"><span>Register</span></a>
+                    </li>
+                </ul>
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="tel:123-456-7890">
+                            <i class="nav_icon fas fa-phone-alt"></i>
+                            <span>Hotline: +123 456 7890</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" href="#">
+                            <i class="nav_icon fas fa-globe-asia"></i>
+                            <span>Language</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header_middle">
+        <div class="container">
+            <nav class="header_middle-content">
+                <a href="#" class="header_logo">
+                    <img src="http://magento2.flytheme.net/themes/sm_zumi/pub/media/logo/stores/2/logo_index_2_1.png" alt="">
+                </a>
+                <div class="form-search">
+                    <input class="input-search" placeholder="Search product..." type="text">
+                    <button class="btn-search"><i class="search-icon fas fa-search"></i></button>
+                </div>
+                <div class="shopping-cart">
+                    <div class="header__cart-wrap">
+                        <a href="#" class="btn-rounder">
+                            <i class="cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                        </a>
+                        <!-- No cart class: shopping_cart-nocart -->
+                        <div class="header__cart-list shopping_cart-nocart">
+                            <img class="shopping_cart-nocart-img" src="/assets/images/no-cart.png" alt="">
+                            <span class="shopping_cart-nocart-msg">You have no items in your shopping cart.</span>
+
+                            <div class="shopping_cart-exist-cart">
+                            <!--Cart exist here-->
+                            <!--<div class="shopping_cart-exist-cart_detail">
+                                    <img src="/assets/images/product01/img1.jpg" alt="default_thumnail-product">
+                                    <div class="product-exist-cart_detail">
+                                        <span class="product-exist-cart_detail_name">Sản phẩm số aaaaaaaaaaaaaaaaaaa</span>
+                                        <span class="product-exist-cart_detail_quantity-price">1 x 20$</span>
+                                    </div>
+                                    <a href="/payment"><i class="product-exist-cart_detail_edit-icon fas fa-pencil-alt"></i></a>
+                                </div>-->
+                            </div>
+                            <a href="/payment" class="button_cart_exist-item">
+                                Check Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--End Dang Dinh Si header -->
+<div class="container">
+    <div class="category-product">
+        <div class="grid__row">
+            <div class="grid__colum-3">
+                <nav class="nav_category">
+                    <div class="nav_category_head">
+                        <i class="nav_category_head-icon fas fa-list-ul"></i>
+                        <h3 onclick="window.location='/products';" class="nav_category_head-heading">category</h3>
+                    </div>
+                    <ul class="nav_category_list">
+                        <% for(var item of categories){ %>
+                            <li class="nav_category_item">
+                                <a class="nav_category_item_link" href="/products/category/<%= item.Id %>"><i class="category_icon_hover fas fa-angle-right"></i><%= item.Name %></a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </nav>
+                <nav class="nav_category">
+                    <div class="nav_category_head">
+                        <i class="nav_category_head-icon fas fa-list-ul"></i>
+                        <h3 class="nav_category_head-heading">COMPARE PRODUCTS</h3>
+                    </div>
+                    <div class="compare_product">
+                        <span class="compare_product_title" >You have no items to compare.</span>
+                    </div>
+                </nav>
+                <nav class="nav_category">
+                    <div class="nav_category_head">
+                        <i class="nav_category_head-icon fas fa-list-ul"></i>
+                        <h3 class="nav_category_head-heading">BEST SELLER</h3>
+                    </div>
+                    <div class="shop_best-seller_product-list">
+                        <% for (var item of bestsell){%>
+                            <div class="shop_best-seller_product">
+                                <img src="<%=item.DefaultImage%>" alt="">
+                                <div class="shop_best-seller_product-info">
+                                    <a href="/detail/<%=item.Id%>" class="shop_best-seller_product-info-link"><%=item.Name%></a>
+                                    <div class="shop_best-seller_product-info-price">
+                                        <span class="shop_best-seller_product-info_price-sale">$<%=item.PromotionPrice%></span>
+                                        <span class="shop_best-seller_product-info_price-old">$<%=item.Price%></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <%}%>
+
+                    </div>
+                </nav>
+                <nav class="nav_category">
+                    <div class="nav_category_head">
+                        <i class="nav_category_head-icon fas fa-list-ul"></i>
+                        <h3 class="nav_category_head-heading">New product</h3>
+                    </div>
+                    <div class="shop_best-seller_product-list">
+                        <% for (var item of newproduct){%>
+                            <div class="shop_best-seller_product">
+                                <img src="<%=item.DefaultImage%>" alt="">
+                                <div class="shop_best-seller_product-info">
+                                    <a href="/detail/<%=item.Id%>" class="shop_best-seller_product-info-link"><%=item.Name%></a>
+                                    <div class="shop_best-seller_product-info-price">
+                                        <span class="shop_best-seller_product-info_price-sale">$<%=item.PromotionPrice%></span>
+                                        <span class="shop_best-seller_product-info_price-old">$<%=item.Price%></span>
+                                    </div>
+                                </div>
+                            </div>
+                       <% }%>
+                    </div>
+                </nav>
+            </div>
+            <div class="grid__colum-9">
+                <div class="home-filter">
+                    <span class="home-filter__label">sort by</span>
+                    <button class="btn btn-filter btn-choose_active">favorite</button>
+                    <button class="btn btn-filter">New Product</button>
+                    <button class="btn btn-filter">best sell</button>
+                    <div class="select-input">
+                        <span class="select-input_label">Filter By Price</span>
+                        <i class="select-input_icon fas fa-caret-down"></i>
+                        <ul class="select-input__list">
+                            <li class="select-input__item">
+                                <a href="" class="select-input__link">low to high</a>
+                            </li>
+                            <li class="select-input__item">
+                                <a href="" class="select-input__link">high to low</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page--current">1</span>/14
+                            </span>
+                        <div class="home-filter__page-control">
+                            <a href="" class="home-filter__page-btn-disable home-filter__page-btn"><i class="home-filter__page-icon fas fa-chevron-left"></i></a>
+                            <a href="" class="home-filter__page-btn"><i class="home-filter__page-icon fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category_product_list">
+                    <div class="grid__row">
+                        <% for (var i=0;i<products.length;i++){ %>
+                            <div class="grid__colum-4">
+                                <div class="mycategory-product">
+                                    <div class="mycategory-product-overlay">
+                                        <ul class="mycategory-product-overlay-list">
+                                            <li class="mycategory-product-overlay-item">
+                                                <a class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-heart"></i></a>
+                                            </li>
+                                            <li class="mycategory-product-overlay-item">
+                                                <a class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-sync-alt"></i></a>
+                                            </li>
+                                            <li class="mycategory-product-overlay-item">
+                                                <a href="/detail/<%=products[i].Id%>" class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-eye"></i></a>
+                                            </li>
+
+                                        </ul>
+                                        <a class="mycategory-product-overlay_cart">
+                                            <i class="mycategory-product-overlay_cart-icon fas fa-shopping-cart"></i><span class="mycategory-product-overlay_cart-title">add to cart</span>
+                                        </a>
+                                    </div>
+                                    <div onclick="window.location='/detail/<%=products[i].Id%>';" class="mycategory-product_info" id="<%=products[i].Id%>">
+                                        <a href="#" class="mycategory-product_info_image">
+                                            <img src="<%=products[i].DefaultImage%>" alt="">
+                                        </a>
+                                        <a href="/detail/<%=products[i].Id%>" class="mycategory-product_info_name best_seller_right_product-title"><%=products[i].Name%></a>
+                                        <span class="mycategory-product_info_price">$<%=products[i].Price%></span>
+                                        <div class="mycategory-product-action-star">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       <% }%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- quang cao -->
+<div class="mycategory-sale-advertisement">
+    <div class="container">
+        <div class="grid__row">
+            <div class="grid__colum-6">
+                <a href="#">
+                    <img class="mycategory-sale-advertisement-img" src="/imgs/id2_static_banner_1.jpg" alt="">
+                </a>
+            </div>
+            <div class="grid__colum-6">
+                <a href="#">
+                    <img class="mycategory-sale-advertisement-img" src="/imgs/id2_static_banner_2.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- send mail -->
+<div class="conainer_full-width send-mail-support">
+    <div class="container">
+        <div class="send-mail-support_content">
+            <span class="send-mail-support_content_heading">NEED HELP? CALL OUR AWARD-WINNING</span>
+            <span class="send-mail-support_content_phone">SUPPORT TEAM 24/7 AT (844) 555-8386</span>
+            <div class="form-sendmail">
+                <i class="form-sendmail_icon fas fa-envelope"></i>
+                <input class="form-sendmail_input" type="text" placeholder="Enter your email...">
+                <button class="form-sendmail_button">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>
+<%- include('modal-login') -%>
+<!-- Modal product detail -->
+<div class="modal_product-detail" id="productModal">
+    <div class="product_modal-overlay"></div>
+    <div class="product_modal-body">
+        <i class="fas fa-check-circle"></i>
+        <span>Add products to the cart successfully!</span>
+    </div>
+</div>
+<!-- End Modal product detail -->
+<%- include('myscript') -%>
+</body>
+</html>

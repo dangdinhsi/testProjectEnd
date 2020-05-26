@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <%- include('mycss') -%>
+</head>
+<body>
+<!--Dang Dinh Si header -->
+<div class="wrapper">
+    <div class="header_top">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-map-marker-alt"></i>
+                            <span>Store Location</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-truck"></i>
+                            <span>Track Your Order</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" id="btnLogin" href="#"><span>Login</span></a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" id="btnRegister" href="#"><span>Register</span></a>
+                    </li>
+                </ul>
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="tel:123-456-7890">
+                            <i class="nav_icon fas fa-phone-alt"></i>
+                            <span>Hotline: +123 456 7890</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" href="#">
+                            <i class="nav_icon fas fa-globe-asia"></i>
+                            <span>Language</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header_middle">
+        <div class="container">
+            <nav class="header_middle-content">
+                <a href="#" class="header_logo">
+                    <img src="/assets/images/logo.png" alt="">
+                </a>
+                <div class="form-search">
+                    <input class="input-search" placeholder="Search product..." type="text">
+                    <button class="btn-search"><i class="search-icon fas fa-search"></i></button>
+                </div>
+                <div class="shopping-cart">
+                    <div class="header__cart-wrap">
+                        <a href="#" class="btn-rounder">
+                            <i class="cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                        </a>
+                        <!-- No cart class: shopping_cart-nocart -->
+                        <div class="header__cart-list shopping_cart-nocart">
+                            <img class="shopping_cart-nocart-img" src="/assets/images/no-cart.png" alt="">
+                            <span class="shopping_cart-nocart-msg">You have no items in your shopping cart.</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--End Dang Dinh Si header -->
+<div class="content_detail">
+    <div class="container">
+        <div class="grid__row">
+            <div class="grid__colum-9">
+                <div class="grid__row">
+                    <div class="grid__colum-6">
+                        <div class="slide_details-product-img">
+                            <div class="slider_images">
+                                <div class="slider_images_item active"><img class="default-product-images" src="<%=listImage[0]%>" alt=""></div>
+                                <div class="slider_images_item"><img class="default-product-images" src="<%=listImage[1]%>" alt=""></div>
+                                <div class="slider_images_item"><img class="default-product-images" src="<%=listImage[2]%>" alt=""></div>
+                                <div class="slider_images_item"><img class="default-product-images" src="<%=listImage[3]%>" alt=""></div>
+                            </div>
+                            <div class="controls">
+                                <div class="prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="next"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                            <ul class="slide_details-product_list">
+                                <li class="slide_details-product_item active" onclick="indicateSlide(this)" id="0">
+                                    <img src="<%=listImage[0]%>" alt="thumbnail detail_1">
+                                </li>
+                                <li class="slide_details-product_item" onclick="indicateSlide(this)" id="1">
+                                    <img src="<%=listImage[1]%>" alt="thumbnail detail_2">
+                                </li>
+                                <li class="slide_details-product_item" onclick="indicateSlide(this)" id="2">
+                                    <img src="<%=listImage[2]%>" alt="thumbnail detail_3">
+                                </li>
+                                <li class="slide_details-product_item" onclick="indicateSlide(this)" id="3">
+                                    <img src="<%=listImage[3]%>" alt="thumbnail detail_4">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__colum-6">
+                        <div class="product_detail-right">
+                            <div class="product_detail-right-head">
+                                <h3 class="product_detail-right-head-title"><%=product.Name%></h3>
+                                <ul class="product_detail-right-head-list">
+                                    <li class="product_detail-right-head-item">
+                                            <span class="customer_review-star">
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                            </span>
+                                    </li>
+                                    <li class="product_detail-right-head-item">
+                                        <a href="#">1 Review</a>
+                                    </li>
+                                    <li class="product_detail-right-head-item">
+                                        <a href="#">Add Your Review
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="product_detail-right-price">
+                                    <span class="product_detail-right_current-price">$<%=product.PromotionPrice%></span>
+                                    <span class="product_detail-right_old-price">$<%=product.Price%></span>
+                                </div>
+                            </div>
+                            <div class="product_detail-right_content">
+                                <div class="product_detail-right_content-status">
+                                    <span class="right-product-detail_code"><%=product.Id%></span>
+                                    <span class="product_detail-right_content-status-product">
+
+                                        <i class="far fa-check-square"></i>
+                                        <%if (product.Status ==1){ %>
+                                        <span>IN STOCK</span>
+                                        <%}%>
+                                    </span>
+                                </div>
+                                <!-- <p class="product_detail-right_content-status-description">Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option into nihil imperdiet doming id quod mazim placerat facer possim assum est notare.</p> -->
+                                <%-product.Description%>
+                                <!--<div class="product_more_detail">
+                                    <p class="product_more_detail-description">Mô tả sản phẩm</p>
+                                    <ul class="product_more_detail-list">
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">thương hiệu</span><span class="product_more_detail-content">điện phân</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">xuất xứ</span><span class="product_more_detail-content">trung quốc</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">dung tích</span><span class="product_more_detail-content">1.8L</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">công suất</span><span class="product_more_detail-content">700W</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">kích thước</span><span class="product_more_detail-content">284 x 273 x 301 mm</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">kích thước</span><span class="product_more_detail-content">284 x 273 x 301 mm</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">kích thước</span><span class="product_more_detail-content">284 x 273 x 301 mm</span></li>
+                                        <li class="product_more_detail-item"><span class="product_more_detail-title">kích thước</span><span class="product_more_detail-content">284 x 273 x 301 mm</span></li>
+
+                                    </ul>
+                                </div>-->
+                                <div class="product_detail-right_content_button">
+                                    <div class="product_detail-right_content_quantity-input">
+                                        <span class="input_prev"><i class="fas fa-minus"></i></span>
+                                        <div id="input_box">
+                                            <span class="input_box_current-quantity">1</span>
+                                        </div>
+                                        <span class="input_next"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                    <a title="Add To Cart" class="product_content_button-cart">
+                                        <i class="product_content_button-icon fas fa-shopping-cart"></i>
+                                        <span class="product_content_button-addcart">add to cart</span>
+                                    </a>
+                                    <a class="product_content_button-heart">
+                                        <i class="product_content_button-icon fas fa-heart"></i>
+                                    </a>
+                                    <a class="product_content_button-sync">
+                                        <i class="product_content_button-icon fas fa-sync-alt"></i>
+                                    </a>
+                                </div>
+                                <div class="product_detail_share">
+                                    <ul class="product_detail_share-list">
+                                        <li class="product_detail_share-item">
+                                            <a class="product_detail_share-link">
+                                                <i class="product_detail_share-link_icon fas fa-thumbs-up"></i>
+                                                <span class="product_detail_share-link_title">Like</span>
+                                                <span class="product_detail_share-link_quantity">(10)</span>
+                                            </a>
+                                        </li>
+                                        <li class="product_detail_share-item">
+                                            <a class="product_detail_share-link">
+                                                <i class="product_detail_share-link_icon fab fa-twitter"></i>
+                                                <span class="product_detail_share-link_title">Tweet</span>
+                                            </a>
+                                        </li>
+                                        <li class="product_detail_share-item">
+                                            <a class="product_detail_share-link">
+                                                <i class="product_detail_share-link_icon fas fa-share-alt"></i>
+                                                <span class="product_detail_share-link_title">Share</span>
+                                                <span class="product_detail_share-link_quantity">(20)</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__colum-3">
+                <nav class="nav_category nav_category-detail_nav">
+                    <div class="nav_category_head">
+                        <i class="nav_category_head-icon fas fa-list-ul"></i>
+                        <h3 class="nav_category_head-heading">related products</h3>
+                    </div>
+                    <div class="shop_best-seller_product-list">
+                        <% for (var i=0;i<relateds.length;i++){%>
+                            <div class="shop_best-seller_product">
+                                <img src="<%=relateds[i].DefaultImage%>" alt="">
+                                <div class="shop_best-seller_product-info">
+                                    <a href="/detail/<%=relateds[i].Id%>" class="shop_best-seller_product-info-link"><%=relateds[i].Name%></a>
+                                    <div class="shop_best-seller_product-info-price">
+                                        <span class="shop_best-seller_product-info_price-sale">$<%=relateds[i].PromotionPrice%></span>
+                                        <span class="shop_best-seller_product-info_price-old">$<%=relateds[i].Price%></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <%}%>
+                    </div>
+                </nav>
+                <!-- <div class="shop-tag_ads">
+                    <a href="#"><img src="assets/images/sidebar-blog-banner-ads (1).jpg" alt=""></a>
+                </div> -->
+            </div>
+            <div class="grid__colum-12">
+                <div class="body-detail_content">
+                    <div class="body-detail_content-heading">
+                        <ul class="body-detail_content-list">
+                            <li class="body-detail_content-item"><a title="detail" class="body-detail_content-link active">Details</a></li>
+                            <li class="body-detail_content-item"><a title="infomation" class="body-detail_content-link">More information</a></li>
+                            <li class="body-detail_content-item"><a title="review" class="body-detail_content-link">Reviews(1)</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab" id="infomation">
+                            <h2>More information..</h2>
+                        </div>
+                        <div class="tab active" id="detail">
+                            <%-product.Details%>
+<!--                            <h2>LET'S SEE WHAT CHEF DEE GOT THAT THEY DON'T WANT US TO EAT</h2>-->
+<!--                            <p>Lorem Khaled Ipsum is a major key to success. Eliptical talk. The key to more success is to get a massage once a week, very important, major key, cloth talk. Mogul talk. Cloth talk. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. Surround yourself with angels. The key to more success is to have a lot of pillows. Life is what you make it, so let’s make it.</p>-->
+<!--                            <p>They key is to have every key, the key to open every door. We don’t see them, we will never see them. To be successful you’ve got to work hard, to make history, simple, you’ve got to make it. They never said winning was easy. Some people can’t handle success, I can. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. How’s business? Boomin. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our break..</p>-->
+                        </div>
+                        <div class="tab" id="review">
+                            <h2>Customer Reviews</h2>
+                            <h3>SED UT PERSPICIATIS UNDE</h3>
+                            <div class="customer_review">
+                                <ul class="customer_review-list">
+                                    <li class="customer_review-item">
+                                        <span class="customer_review-title">Rating</span>
+                                        <span class="customer_review-star">
+                                            <i class="customer_review-icon fas fa-star"></i>
+                                            <i class="customer_review-icon fas fa-star"></i>
+                                            <i class="customer_review-icon fas fa-star"></i>
+                                            <i class="customer_review-icon fas fa-star"></i>
+                                            <i class="customer_review-icon fas fa-star"></i>
+                                            </span>
+                                    </li>
+                                    <li class="customer_review-item">
+                                        <span class="customer_review-title">Quantity</span>
+                                        <span class="customer_review-star">
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                            </span>
+                                    </li>
+                                    <li class="customer_review-item">
+                                        <span class="customer_review-title">Price</span>
+                                        <span class="customer_review-star">
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                            </span>
+                                    </li>
+                                    <li class="customer_review-item">
+                                        <span class="customer_review-title">Value</span>
+                                        <span class="customer_review-star">
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                                <i class="customer_review-icon fas fa-star"></i>
+                                            </span>
+                                    </li>
+                                </ul>
+                                <div class="customer_review-customer">
+                                    <p>"Cực kỳ hài lòng về chất lượng cả mẫu mã và chất lượng sản phẩm"</p>
+                                    <span>Review by <b style="font-weight: 500;font-size: 1.3rem;">Siddd00474</b>.</span>
+                                    <span>Posted on 20/04/2020.</span>
+                                </div>
+                            </div>
+                            <div class="your_review">
+                                <span class="your_review-title">You're reviewing:</span><span class="your_review_title-product">Philips HR1861 Whole Fruit Juicer</span>
+                            </div>
+                            <div class="customer_form-review">
+                                <span class="customer_form-review-title">Your Rating<i class="customer_form-review-icon fas fa-star-of-life"></i></span>
+                                <div class="customer_form-review_rate">
+                                    <span>Price</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star' title='Poor' data-value='1'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Fair' data-value='2'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Good' data-value='3'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Excellent' data-value='4'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='WOW!!!' data-value='5'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="customer_form-review_rate">
+                                    <span>Value</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star' title='Poor' data-value='1'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Fair' data-value='2'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Good' data-value='3'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Excellent' data-value='4'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='WOW!!!' data-value='5'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="customer_form-review_rate">
+                                    <span>Quantity</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star' title='Poor' data-value='1'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Fair' data-value='2'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Good' data-value='3'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='Excellent' data-value='4'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                            <li class='star' title='WOW!!!' data-value='5'>
+                                                <i class='fa fa-star fa-fw'></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="customer-form-feedback_form">
+                                <div class="customer-form-feedback">
+                                    <span class="customer-form-feedback-label"><label for="nickname">Nickname</label><i class="customer_form-review-icon fas fa-star-of-life"></i></span>
+                                    <input class="customer-form-feedback-input" required type="text" name="nickname" placeholder="">
+                                    <span class="customer-form-feedback-label"><label for="sumary">Summary</label><i class="customer_form-review-icon fas fa-star-of-life"></i></span>
+                                    <input class="customer-form-feedback-input" required type="text" name="sumary" placeholder="">
+                                    <span class="customer-form-feedback-label"><label for="review">Review</label><i class="customer_form-review-icon fas fa-star-of-life"></i></span>
+                                    <textarea class="customer-form-feedback-textarea" required></textarea>
+                                    <button class="btn-review">submit review</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__colum-12">
+                <div class="upsell-product">
+                    <div class="upsell-product_heading">
+                        <h2>upsell products</h2>
+                    </div>
+                    <div class="upsell-product_content">
+                        <div class="owl-carousel owl-theme myowl_si">
+                           <% for (var item of upsell){%>
+                                <div class="item">
+                                    <div class="mycategory-product">
+                                        <div class="mycategory-product-overlay">
+                                            <ul class="mycategory-product-overlay-list">
+                                                <li class="mycategory-product-overlay-item">
+                                                    <a class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-heart"></i></a>
+                                                </li>
+                                                <li class="mycategory-product-overlay-item">
+                                                    <a class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-sync-alt"></i></a>
+                                                </li>
+                                                <li class="mycategory-product-overlay-item">
+                                                    <a class="mycategory-product-overlay-link"><i class="mycategory-product-overlay-icon fas fa-eye"></i></a>
+                                                </li>
+
+                                            </ul>
+                                            <a class="mycategory-product-overlay_cart">
+                                                <i class="mycategory-product-overlay_cart-icon fas fa-shopping-cart"></i><span class="mycategory-product-overlay_cart-title">add to cart</span></a>
+                                        </div>
+                                        <div class="mycategory-product_info">
+                                            <a href="#" class="mycategory-product_info_image">
+                                                <img src="<%=item.DefaultImage%>" alt="">
+                                            </a>
+                                            <a href="/detail/<%=item.Id%>" class="mycategory-product_info_name best_seller_right_product-title"><%=item.Name%></a>
+                                            <span class="mycategory-product_info_price">$<%=item.Price%></span>
+                                            <div class="mycategory-product-action-star">
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          <% } %>
+                        </div>
+                        <div class="my-controls">
+                            <div class="owl-controls">
+                                <div class="owl-nav">
+                                    <div class="owl-prev carousel_button_left"><i class="carousel_button-icon fas fa-chevron-left"></i></div>
+                                    <div class="owl-next carousel_button_right"><i class="carousel_button-icon fas fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<%- include('footer') -%>
+<%- include('modal-login') -%>
+<%- include('myscript') -%>
+</body>
+</html>

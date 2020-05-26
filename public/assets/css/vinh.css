@@ -1,0 +1,887 @@
+
+.section.section1{
+    margin-top: 20px;
+}
+
+.section.section1 .container .megamenu .sidebar-megamenu a{
+    text-decoration: none;
+}
+.section.section1 .container .megamenu .sidebar-megamenu a p{
+    padding: 14px 16px;
+    color: white;
+    background-color:#fd6500;
+    font-size: 16px;
+    padding-left: 30px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+}
+.section.section1 .container .megamenu .sidebar-megamenu a p i{
+    margin-right: 10px;
+}
+.section.section1 .container .megamenu .main-megamenu .home{
+    color: tomato;
+}
+.section.section1 .container .megamenu .main-megamenu a{
+    text-decoration: none;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 40px;
+    color: black;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown{
+    display: inline-block;
+    position: relative;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+.section.section1 .container .main-megamenu a:hover {
+    color: #fd6500;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown:hover .dropbtn{
+    color: #fd6500;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown .dropdown-content{
+    display: none;
+    position: absolute;
+    bottom: -200px;
+    background-color: #f9f9f9;
+    width: 170px;
+    z-index: 10;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown .dropdown-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown .dropdown-content a:hover{
+    color: #fd6500;
+}
+.section.section1 .container .megamenu .main-megamenu .dropdown:hover .dropdown-content{
+    display: block;
+}
+.section.section2 {
+    margin-top: 10px;
+}
+.section.section2 .container .categori ul{
+    list-style: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.section.section2 .container .categori ul li{
+    height: 56px;
+}
+.section.section2 .container .categori ul li a{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin-left: 5%;
+    border-bottom: 1px solid lightgray ;
+    color: black;
+    text-decoration: none;
+}
+.section.section2 .container .categori ul li a:hover{
+    background-color:#ebebeb;
+    border-left: 2px solid #fd6500;
+}
+.section.section2 .container .categori ul li a .iconmega{
+    padding: 8px 5px 0 15px;
+
+}
+.section.section2 .container .categori ul li a .title{
+    padding-top: 15px;
+    font-size: 1.5rem;
+}
+.section.section2 .container .categori ul li a .title span{
+    margin-top: 5px;
+}
+.section.section2 .container .categori ul li a .iconmega.cup img{
+    margin-top: 5px;
+}
+.section.section2 .container .categori ul li a .iconmega.gift img{
+    margin-top: 3px;
+}
+.section.section2 .container .categori ul li .morecate{
+    border-bottom: none;
+}
+.section.section2 .container .categori ul li .morecate span i{
+    padding-top: 5px;
+    font-size: 1.5rem;
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+}
+.section.section3{
+    margin-top: 50px;
+    font-size: 16px;
+}
+.section.section3 .container .policy{
+    height: 75px;
+    padding: 0 10px;
+}
+.section.section3 .container .policy .detailpolicy {
+    display: flex;
+    height: 75px;
+    padding: 10px;
+    border: 1px solid #ebebeb ;
+    border-radius: 40px;
+}
+.section.section3 .container .policy .detailpolicy:hover{
+    border: 1px solid #fd6500;
+}
+.section.section3 .container .policy .imgpolicy{
+    height: 55px;
+    width: 55px;
+    background-color: #fd6500;
+    position: relative;
+    border-radius:100%;
+
+}
+.section.section3 .container .policy .imgpolicy img{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+}
+.section.section3 .container .policy .titlepolicy{
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #666666;
+    line-height: 1.5;
+}
+.section.section4 {
+    margin-top: 50px;
+}
+.section.section4 .container .hotcategori{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+}
+.section.section4 .container .hotcategori div{
+    padding: 10px 12px;
+    text-align: center;
+}
+.section.section4 .container .hotcategori div div{
+    border: 1px solid #ebebeb ;
+    width: 100%;
+    border-radius: 20px;
+}
+.section.section4 .container .hotcategori div div a{
+    color: white;
+    font-size: 20px;
+}
+.section.section4 .container .hotcategori div .Refrigeration{
+    background: linear-gradient(to right, #0b8f81, #0fd0bc);
+}
+.section.section4 .container .hotcategori div .Refrigeration:hover{
+    background: linear-gradient(to right, #0fd0bc, #0b8f81);
+}
+.section.section4 .container .hotcategori div .Appliances{
+    background: linear-gradient(to right, #7b5e8f, #cc79d0);
+}
+.section.section4 .container .hotcategori div .Appliances:hover{
+    background: linear-gradient(to right, #cc79d0, #7b5e8f);
+}
+.section.section4 .container .hotcategori div .Cookwares{
+    background: linear-gradient(to right, #8f3035, #d0157a);
+}
+.section.section4 .container .hotcategori div .Cookwares:hover{
+    background: linear-gradient(to right, #d0157a, #8f3035);
+}
+.section.section4 .container .hotcategori div .Foodstorage{
+    background: linear-gradient(to right, #078f0d, #0ed0c9);
+}
+.section.section4 .container .hotcategori div .Foodstorage:hover{
+    background: linear-gradient(to right, #0ed0c9, #078f0d);
+}
+.section.section5 .container .deal{
+    width: 116px;
+    display: block;
+    margin: 30px 0 30px 10px;
+}
+.section.section5 .container .deal h2{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #fd6500;
+    padding: 10px 0;
+}
+.section.section5 .container .owlslide {
+    height: auto;
+}
+.section.section5 .container .owlslide .owl-item{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.owl-stage-outer{
+    position: relative;
+}
+.nav_my-controls{
+    width: 100%;
+    position: absolute;
+    top: 43%;
+}
+.my_carousel_button_left{
+    position: absolute;
+    left: -5px;
+}
+.my_carousel_button_right{
+    position: absolute;
+    right:-5px;
+
+}
+.my_carousel_button_left,.my_carousel_button_right{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: #869791 !important;
+    text-align: center !important;
+    border-radius: 50% !important;
+}
+.my_carousel_button_left:hover,.my_carousel_button_right:hover{
+    background-color: #fd6500 !important;
+}
+.my_carousel_button-icon{
+    font-size: 1.5rem;
+    padding: 7px 0;
+    margin: auto;
+    color: white;
+}
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev{
+    font-size: 30px!important;
+    font-weight: 600;
+}
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 43%;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #444444 !important;
+    color: white!important;
+}
+.owl-carousel .owl-nav button.owl-next:hover{
+    background-color: tomato !important;
+    border: 1px solid tomato!important;
+}
+.owl-carousel .owl-nav button.owl-prev:hover{
+    background-color: tomato !important;
+    border: 1px solid tomato!important;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    top: 43%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #444444 !important;
+    color: white!important;
+}
+
+.section.section5 .owl-item:hover{
+    box-shadow: 0 0 7px #ccc;
+}
+.owl-item  div p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 20px;
+
+}
+.owl-item  a p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+.owl-item a div img{
+    padding: 5px;
+}
+.owl-item  a{
+    text-decoration: none;
+}
+.owl-item  div .price{
+    color:#fd6500 ;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.owl-item  .itemtitle{
+    color: #0f0f0f;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.owl-item  .itemtitle:hover{
+    color:#fd6500  ;
+}
+.owl-item  div p{
+    width: 40%;
+    float: left;
+}
+.owl-item  div a{
+    width: 40%;
+    float: right;
+    text-align: right;
+    font-size: 16px;
+    margin-right: 12px;
+    margin-top: 5px;
+}
+.owl-item  div a  i{
+    padding: 10px 10px;
+    color: silver;
+}
+.section.section5 .container .owl-item .best_seller_right_product-action-star{
+    margin-left: 20px;
+}
+.section.section5 .container .owl-item .best_seller_right_product-action-star a{
+    display: block;
+    margin-right: 0;
+    width: 15px;
+}
+.section.section5 .container .owl-item .best_seller_right_product-action-star a i{
+    padding: 0;
+    border: none;
+    color: #ffb800;
+    background-color: white;
+}
+.owl-item  div a  i:hover{
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    background-color: #fd6500;
+    color: white;
+}
+.section.section5 .container .banner1 a img:hover,.section.section5 .container .banner2 a img:hover{
+    opacity: 0.7;
+}
+.section.section5 .owl-item .choose-more a {
+    width: 50px;
+}
+.section.section6 {
+    margin-top: 50px;
+}
+.section.section6 .container .newproduct{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+.section.section6 .newproduct a p{
+    padding-left: 23px;
+}
+.section.section6 .best_seller_right_product-detail{
+    padding-left: 23px;
+}
+.section.section6 .newproduct a img{
+    padding: 10px;
+}
+.section.section6 .newproduct .best_seller_right_product-detail .best_seller_right_product-action{
+    margin-bottom: 10px;
+}
+.section.section6 .newproduct:hover{
+    box-shadow: 0 0 5px #cccc;
+    cursor: pointer;
+}
+.section.section6 .container .newproducttitle{
+    font-size: 3rem;
+    color: #0f0f0f;
+    width: 20.7rem;
+    padding-bottom: 1rem;
+    margin-left: 12px;
+    border-bottom: 1.5px solid tomato;
+    margin-bottom: 4rem;
+}
+.section.section6 .container .grid__colum-3{
+    margin-bottom: 24px;
+    padding-left: 12px;
+}
+.section.section6 .container .newitem{
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+}
+.section.section6 .container .newitem ul li{
+    padding: 26.8px 0;
+    border-bottom:1px solid lightgray;
+}
+.section.section6 .container .newitem ul .lastest{
+    border-bottom: none;
+}
+.section.section6 .container .newitem a{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.section.section6 .container .newitem ul li:hover{
+    box-shadow: 0 0 1rem #cccc;
+    cursor: pointer;
+}
+.section.section6 .container .newitem a span{
+    font-size: 2.5rem;
+}
+.section.section7{
+    background-color: #f5f5f5;
+}
+.section.section7 .container .grid__colum-6{
+    text-align: center;
+}
+.section.section7 .container .footer-top .app-list {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.section.section7 .container .footer-top{
+    border-bottom: 1px solid lightgray;
+    padding:50px 0;
+}
+.section.section7 .container .footer-top .app-list li{
+    padding: 0 10px;
+    font-size: 2rem;
+}
+.section.section7 .container .footer-top .social {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin-left: 14rem;
+}
+.section.section7 .container .footer-top .social li{
+    padding: 0 10px;
+    font-size: 2rem;
+}
+.section.section7 .container .footer-top .social li i:hover{
+    color: tomato;
+}
+.section.section7 .container .footer-top .social .iconsocial a i{
+    font-size: 4.3rem;
+}
+.section.section7 .container .footer-bottom{
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+.section.section7 .container .footer-bottom .footer-contact div ul li i{
+    color: tomato;
+    margin-right: 5px;
+}
+.section.section7 .container .footer-bottom .footer-contact div ul li{
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+.section.section7 h2{
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.section.section7 .footer-service{
+    text-align: center;
+}
+.section.section7 .footer-service div ul a li{
+    color: #0f0f0f;
+    margin-bottom: 1rem;
+    text-align: left;
+    margin-left: 14rem;
+}
+.section.section7 .footer-service div ul a li:hover{
+    list-style: circle;
+    color: tomato;
+}
+/* end css home page*/
+/*start css contact us*/
+.section.section8 .container h2{
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.section.section8 .container div div form div div label{
+    font-size: 1.6rem;
+}
+.section.section8 .container div div form div div input{
+    width: 100%;
+    height: 42px;
+    margin: 10px 0 20px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.section.section8 .container div div form label{
+    font-size: 1.6rem;
+}
+.section.section8 .container div div form input{
+    width: 100%;
+    height: 42px;
+    margin: 10px 0 20px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.section.section8 .container div div form textarea{
+    width: 571px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+::placeholder{
+    padding-left: 10px;
+}
+button{
+    padding:10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: tomato;
+    margin: 1rem 0 0 0;
+    border: 1px solid tomato;
+    border-radius: 3px;
+}
+#map {
+    width: 100%;
+    height: 38rem;
+    margin-top: 2.5rem;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.table{
+    width: 100%;
+    font-size: 1.6rem;
+    color: #444444;
+    margin-top: 50px;
+}
+.table thead tr .Item{
+    text-align: left;
+    padding-bottom: 20px;
+}
+.table_img{
+    width: 100%;
+    display: inline-block;
+}
+.table_img img,.table_img p{
+    display: block;
+    float: left;
+    margin-top: 20px;
+    color: #444444;
+}
+thead{
+    border-bottom: 3px solid lightgray;
+}
+.table tbody tr .Price,.table tbody tr .Total{
+    font-weight: 500;
+}
+.table_img p{
+    font-size: 1.4rem;
+}
+.table_img p:hover{
+    color: tomato;
+}
+.table_img img{
+    border:1px solid lightgray;
+    margin-right: 20px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.table_img img:hover{
+    border: 1px solid tomato;
+}
+.table tbody tr .Qty span{
+    padding: 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+td{
+    display: table-cell;
+    position: relative;
+}
+td>span{
+    position: absolute;
+    top: 20px;
+    left: 32%;
+}
+.section.section10 .button1 button{
+    margin-left: 12px;
+    color: #444444;
+    background-color: white;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+.section.section10 tbody{
+    border-bottom: 1px solid lightgray;
+}
+.section.section10 .button1{
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 5px;
+}
+.section.section10 .button1 button{
+    margin-bottom: 26px;
+}
+.section.section10 .button1 button:hover{
+    background-color: tomato;
+}
+.section.section10 .button2 button{
+    cursor: pointer;
+}
+.section.section10 .button2 button:hover{
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+.section.section10 .button2 button a{
+    color: white;
+}
+section.section10 .button2 button.clear{
+    margin-left: 194px;
+}
+.section.section10 .button2 button{
+    margin-left: 12px;
+}
+.section.section10 .summary{
+    border: 1px solid lightgray;
+    margin-top: 50px;
+    padding: 20px;
+}
+.section.section10 .summary .summary1{
+    border: 1px solid lightgray;
+    text-align: center;
+    font-size: 1.4rem;
+    height: 35px;
+    padding-top: 10px;
+    cursor: pointer;
+    background-color: #fafafa;
+}
+.section.section10 .summary .summary1 i{
+    margin-left: 50px;
+}
+.section.section10 .summary #summarydow.active{
+    display: none;
+}
+.section.section10 .summary .summaryup{
+    display: none;
+}
+.section.section10 .summary #summaryup.active{
+    display: block;
+}
+.section.section10 .summary h4{
+    font-size: 12px;
+    margin: 10px 0 30px 0;
+}
+.section.section10 .summary h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.section.section10 .summary form label,.section.section10 .summary form select{
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.section.section10 .summary form select,.section.section10 .summary form input{
+    width: 331px;
+    height: 35px;
+}
+.section.section10 .summary form{
+    display: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.section.section10 .summary #form-payment.active{
+    display: block;
+}
+.section.section10 .summary form input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.section.section10 .summary form div p{
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.section.section10 .summary form div input{
+    width: 12px;
+    height: 12px;
+}
+.section.section10 .summary p{
+    font-size: 12px;
+}
+.sub,.shiping,.order{
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+.section.section10 .summary .sub span{
+    margin-left: 233px;
+}
+.section.section10 .summary .shiping span{
+    margin-left: 138px;
+}
+.section.section10 .summary .order span{
+    margin-left: 218px;
+    font-weight: 500;
+}
+.section.section10 .summary #discountup{
+    display: none;
+}
+.section.section10 .summary #discountup.active{
+    display: block;
+}
+.section.section10 .summary #discountdow.active{
+    display: none;
+}
+.section.section10 .summary #form-discount.active{
+    display: block;
+}
+.section.section10 .summary #form-discount{
+    margin-top: 20px;
+}
+.section.section10 .summary #discount-button{
+    background-color: #333333;
+    border:1px solid #333333;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.section.section10 .summary #discount-button:hover{
+    background-color: tomato;
+    border:1px solid tomato;
+    border-radius: 3px;
+}
+.section.section10 .summary button#checkout{
+    width: 330px;
+    cursor: pointer;
+}
+.section.section10 {
+    margin-bottom: 30px;
+}
+.section.section10 .container form div table tbody tr td button.reset-product{
+    padding: 1px 2px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #333333;
+    border:1px solid #333333;
+}
+.section.section10 .container form div table tbody tr td button.reset-product:hover{
+    background-color: tomato;
+    border:1px solid tomato;
+}
+.section.section10 .container form div table tbody tr{
+    border-bottom: 1px solid lightgray;
+}
+.section.section11{
+    margin-top: 50px;
+}
+.section.section11  .orderitem{
+    height: 55%;
+}
+.section.section11  .orderitem h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.section.section11 .orderitem #itemdow.active{
+    display: none;
+}
+.section.section11 .orderitem #itemup{
+    display: none;
+}
+.section.section11 .orderitem #itemup.active{
+    display: block;
+}
+.section.section11 #item-order{
+    display: none;
+}
+.section.section11 #item-order.active{
+    display: block;
+}
+.section.section11   h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.section.section11 .summary1{
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    font-size: 1.4rem;
+    height: 35px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.section.section11 .summary1 i{
+    margin-left: 270px;
+}
+.section.section11 .container .order-detail div div img{
+    margin-top: 10px;
+}
+.section.section11 .container .order-detail div div p{
+    margin-top: 20px;
+    font-size: 12px;
+}
+.section.section11 .container .orderitem{
+    background-color: #fafafa;
+}
+.section.section11 .container .checkout div p{
+    margin-top: 20px;
+}
+.section.section11 .container .checkout div p.orderprice{
+    text-align: right;
+    margin-right: 35px;
+}
+.section.section11 .container .checkout{
+    border-top: 1px solid lightgray;
+    /*margin-top: 20px;*/
+    font-size: 16px;
+    font-weight: 400;
+}
+.section.section11 form.form-checkout label{
+    font-size: 1.6rem;
+    color: #666;
+}
+.section.section11 form.form-checkout label span{
+    color: tomato;
+    margin-left: 5px;
+}
+.section.section11 form.form-checkout input{
+    width: 80%;
+    height: 42px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray ;
+    border-radius: 5px;
+}
+.section.section11 form.form-checkout select{
+    width: 80%;
+    height: 42px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray ;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+}
+.section.section11 form.form-checkout select option{
+    padding-left: 5px;
+}
+.section.section11 form.form-checkout p{
+    font-size: 14px;
+    color: #666;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+.section.section11 button{
+    cursor: pointer;
+    margin: 50px 0;
+}
+.section.section11 .alam{
+    font-size: 16px;
+    color: tomato;
+    margin-bottom: 50px;
+}
+.theme-default .nivo-directionNav a {
+    z-index: 10000;
+    background-color: tomato;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/vinh.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="libs/slider/themes/default/default.css"/>
+    <link type="text/css" rel="stylesheet" href="libs/slider/nivo-slider.css"/>
+    <link rel="stylesheet" href="libs/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owlcarousel/assets/owl.theme.default.min.css">
+</head>
+<body>
+<!--Dang Dinh Si header -->
+<div class="wrapper">
+    <div class="header_top">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-map-marker-alt"></i>
+                            <span>Store Location</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="">
+                            <i class="nav_icon fas fa-truck"></i>
+                            <span>Track Your Order</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" id="btnLogin" href="#"><span>Login</span></a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" id="btnRegister" href="#"><span>Register</span></a>
+                    </li>
+                </ul>
+                <ul class="menu_nav">
+                    <li class="menu_nav-item separate">
+                        <a class="navbar_link" href="#">
+                            <i class="nav_icon fas fa-phone-alt"></i>
+                            <span>Hotline: +123 456 7890</span>
+                        </a>
+                    </li>
+                    <li class="menu_nav-item">
+                        <a class="navbar_link" href="#">
+                            <i class="nav_icon fas fa-globe-asia"></i>
+                            <span>Language</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header_middle">
+        <div class="container">
+            <nav class="header_middle-content">
+                <a href="#" class="header_logo">
+                    <img src="http://magento2.flytheme.net/themes/sm_zumi/pub/media/logo/stores/2/logo_index_2_1.png" alt="">
+                </a>
+                <div class="form-search">
+                    <input class="input-search" placeholder="Search product..." type="text">
+                    <div class="search_select">
+                        <span class="select-label">All Categories</span>
+                        <a class="select-icon-link" href=""><i class="select-icon fas fa-sort-down"></i></a>
+                        <ul class="search-option">
+                            <li class="search-option-item"><a href="#">--Category 1</a></li>
+                            <li class="search-option-item"><a href="#">--Category 2</a></li>
+                            <li class="search-option-item"><a href="#">--Category 3</a></li>
+                            <li class="search-option-item"><a href="#">--Category 4</a></li>
+                            <li class="search-option-item"><a href="#">--Category 5</a></li>
+                            <li class="search-option-item"><a href="#">--Category 6</a></li>
+                            <li class="search-option-item"><a href="#">--Category 7</a></li>
+                            <li class="search-option-item"><a href="#">--Category 8</a></li>
+                            <li class="search-option-item"><a href="#">--Category 9</a></li>
+                            <li class="search-option-item"><a href="#">--Category 10</a></li>
+                            <li class="search-option-item"><a href="#">--Category 11</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-search"><i class="search-icon fas fa-search"></i></button>
+
+                </div>
+                <div class="shopping-cart">
+                    <div class="header__cart-wrap">
+                        <a href="#" class="btn-rounder">
+                            <i class="cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                        </a>
+                        <!-- No cart class: shopping_cart-nocart -->
+                        <div class="header__cart-list shopping_cart-nocart">
+                            <img class="shopping_cart-nocart-img" src="./assets/images/no-cart.png" alt="">
+                            <span class="shopping_cart-nocart-msg">You have no items in your shopping cart.</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<section class="section section8">
+    <div class="container">
+        <h2>CONTACT INFORMATION</h2>
+        <div class="grid__row">
+            <div class="grid__colum-6">
+                <form action="#" method="post">
+                    <div class="grid__row">
+                        <div class="grid__colum-6">
+                            <label for="name">FULL NAME</label></br>
+                            <div><input name="name" id="name" type="text" placeholder="FullName" required></div>
+                        </div>
+                        <div class="grid__colum-6">
+                            <label for="gmail">GMAIL</label></br>
+                            <input name="gmail" id="gmail" type="text" placeholder="Gmail" required></br>
+                        </div>
+                    </div>
+                    <label for="tel"> PHONE NUMBER</label></br>
+                    <input name="phonenumber" id="tel" type="tel" placeholder="PhoneNumber" required>
+                    <textarea placeholder="Message" cols="79" rows="15" required></textarea>
+                    <button type="submit">SEND YOUR MESSAGE</button>
+                </form>
+            </div>
+            <div class="grid__colum-6">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- send mail -->
+<div class="conainer_full-width send-mail-support">
+    <div class="container">
+        <div class="send-mail-support_content">
+            <span class="send-mail-support_content_heading">NEED HELP? CALL OUR AWARD-WINNING</span>
+            <span class="send-mail-support_content_phone">SUPPORT TEAM 24/7 AT (844) 555-8386</span>
+            <div class="form-sendmail">
+                <i class="form-sendmail_icon fas fa-envelope"></i>
+                <input class="form-sendmail_input" type="text" placeholder="Enter your email...">
+                <button class="form-sendmail_button">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include('footer')-%>
+<script>
+    var map;
+    function initMap() {
+        var position = {
+            lat: 21.0417031,
+            lng: 105.774485
+        };
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: position,
+            zoom: 16
+        });
+        var marker = new google.maps.Marker({
+            position:position,
+            map:map,
+            label:{text:'Zumi Shop',color:'blue'}
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap"
+        async defer></script>
+</body>
+</html>
